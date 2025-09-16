@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rushi Wang — Academic Homepage</title>
+  <meta name="description" content="Rushi Wang — AI for Science (accounting, finance, management), AI Safety, Context Engineering." />
+  <meta property="og:title" content="Rushi Wang — Academic Homepage" />
+  <meta property="og:description" content="UIUC MAS graduate. Research: AI for Science, AI Safety, Context Engineering." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="headshot.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, 'Helvetica Neue', Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    .floaty { transition: transform .2s ease, box-shadow .2s ease; }
+    .floaty:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,.08); }
+    .container-narrow{ max-width: 980px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- 顶部导航 -->
+  <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b">
+    <div class="container-narrow mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#home" class="font-extrabold tracking-tight text-lg">Rushi Wang</a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#about" class="hover:opacity-70">About</a>
+        <a href="#publications" class="hover:opacity-70">Publications</a>
+        <a href="#projects" class="hover:opacity-70">Projects</a>
+        <a href="#news" class="hover:opacity-70">News</a>
+        <a href="#contact" class="hover:opacity-70">Contact</a>
+      </nav>
+      <a href="#contact" class="md:hidden px-3 py-1.5 rounded-xl bg-gray-900 text-white text-sm">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative">
+    <div class="container-narrow mx-auto px-4 py-14 sm:py-20">
+      <div class="grid lg:grid-cols-3 gap-10 items-center">
+        <div class="lg:col-span-2">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">Hi, I'm <span class="text-gray-900">Rushi Wang</span></h1>
+          <p class="mt-4 text-lg text-gray-600 max-w-2xl">UIUC MAS (Accounting). Research interests: <span class="font-semibold">AI for Science</span> (accounting, finance, management), <span class="font-semibold">AI Safety</span>, and <span class="font-semibold">Context Engineering</span>. I focus on building trustworthy LLMs and policy-aware agents robust to mixed and noisy contexts.</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#publications" class="inline-flex items-center px-4 py-2 rounded-xl bg-gray-900 text-white text-sm font-semibold floaty">Selected Publications</a>
+            <a href="./cv.pdf" class="inline-flex items-center px-4 py-2 rounded-xl bg-white border text-sm font-semibold floaty" target="_blank" rel="noreferrer">CV (PDF)</a>
+            <a href="https://scholar.google.com/citations?user=1ZbraIkAAAAJ" class="inline-flex items-center px-4 py-2 rounded-xl bg-white border text-sm font-semibold floaty" target="_blank" rel="noreferrer">Google Scholar</a>
+          </div>
+          <ul class="mt-6 text-gray-600 text-sm space-y-1">
+            <li>✦ Domain expertise: auditing, accounting, finance</li>
+            <li>✦ Methods & interests: policy internalization, context robustness, evaluation for financial/audit tasks</li>
+          </ul>
+        </div>
+        <div class="flex lg:justify-end">
+          <img src="headshot.jpg" alt="profile photo" class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover ring-1 ring-gray-200 floaty" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-14 sm:py-20 border-t">
+    <div class="container-narrow mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">About</h2>
+      <p class="mt-4 text-gray-600 max-w-3xl leading-relaxed">I received my M.S. in Accounting (MAS) from the University of Illinois Urbana–Champaign. My work spans <span class="font-semibold">AI for Science</span> in business domains (accounting, finance, management), <span class="font-semibold">AI Safety</span>, and <span class="font-semibold">Context Engineering</span>. I aim to conduct rigorous, high‑impact research at the intersection of AI and organizational decision‑making, building policy‑aware, trustworthy agents for real‑world applications.</p>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="py-14 sm:py-20 bg-gray-50">
+    <div class="container-narrow mx-auto px-4">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Selected Publications</h2>
+        <a class="text-sm text-gray-500 hover:text-gray-700" href="https://scholar.google.com/citations?user=1ZbraIkAAAAJ" target="_blank" rel="noreferrer">Google Scholar →</a>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <article class="p-6 bg-white rounded-2xl border floaty">
+          <h3 class="text-lg font-semibold leading-snug">Context Engineering for Trustworthiness: Rescorla–Wagner Steering Under Mixed and Inappropriate Contexts</h3>
+          <p class="mt-1 text-sm text-gray-500">EMNLP 2025 (Main)</p>
+          <p class="mt-3 text-gray-600 text-sm">We study how minimal inappropriate content can disproportionately degrade LLM responses and propose RW‑Steering, a two‑stage method to detect and discount such context for robust, generalizable performance.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <a class="px-3 py-1 rounded-full border" href="https://github.com/Oppugno-Rushi/rw-steering-page" target="_blank">📄 Project Page</a>
+            <button class="px-3 py-1 rounded-full border" onclick="toggleBib('bib1')">🔖 BibTeX</button>
+          </div>
+          <pre id="bib1" class="hidden mt-3 p-3 bg-gray-50 rounded-lg text-xs overflow-x-auto">@inproceedings{wang2025rwsteering,
+  title={Context Engineering for Trustworthiness: Rescorla--Wagner Steering Under Mixed and Inappropriate Contexts},
+  booktitle={EMNLP},
+  year={2025}
+}
+</pre>
+        </article>
+
+        <article class="p-6 bg-white rounded-2xl border floaty">
+          <h3 class="text-lg font-semibold leading-snug">AuditBench: A Benchmark for Large Language Models in Financial Statement Auditing</h3>
+          <p class="mt-1 text-sm text-gray-500">AAAI 2024 Workshop</p>
+          <p class="mt-3 text-gray-600 text-sm">A domain benchmark for assessing LLM capabilities in financial statement auditing, spanning tasks like understanding standards, identifying discrepancies, and providing grounded recommendations.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <a class="px-3 py-1 rounded-full border" href="#" target="_blank">📄 PDF</a>
+            <button class="px-3 py-1 rounded-full border" onclick="toggleBib('bib2')">🔖 BibTeX</button>
+          </div>
+          <pre id="bib2" class="hidden mt-3 p-3 bg-gray-50 rounded-lg text-xs overflow-x-auto">@inproceedings{wang2024auditbench,
+  title={AuditBench: A Benchmark for Large Language Models in Financial Statement Auditing},
+  booktitle={AAAI Workshop},
+  year={2024}
+}
+</pre>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-14 sm:py-20">
+    <div class="container-narrow mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Projects</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <a class="p-5 bg-white rounded-2xl border floaty" href="https://github.com/Oppugno-Rushi/rw-steering-page" target="_blank">
+          <h3 class="font-semibold">RW‑Steering</h3>
+          <p class="mt-2 text-sm text-gray-600">Rescorla–Wagner‑guided context control for robust LLMs.</p>
+        </a>
+        <a class="p-5 bg-white rounded-2xl border floaty" href="#" target="_blank">
+          <h3 class="font-semibold">AuditBench</h3>
+          <p class="mt-2 text-sm text-gray-600">Auditing‑focused evaluation suite for LLM agents.</p>
+        </a>
+        <a class="p-5 bg-white rounded-2xl border floaty" href="#" target="_blank">
+          <h3 class="font-semibold">Policy‑Aware Agents</h3>
+          <p class="mt-2 text-sm text-gray-600">Policy internalization & complex workflow reasoning.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news" class="py-14 sm:py-20 bg-gray-50">
+    <div class="container-narrow mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">News</h2>
+      <ul class="mt-6 space-y-3 text-sm">
+        <li class="p-4 bg-white rounded-xl border floaty"><span class="text-gray-500">2025‑09‑15</span> — Personal website launched on GitHub Pages.</li>
+        <li class="p-4 bg-white rounded-xl border floaty"><span class="text-gray-500">2025‑08‑30</span> — Released early materials for policy‑aware agent evaluation.</li>
+        <li class="p-4 bg-white rounded-xl border floaty"><span class="text-gray-500">2025‑07‑10</span> — Invited talk on Context Engineering.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-14 sm:py-20 border-t">
+    <div class="container-narrow mx-auto px-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold">Contact</h2>
+      <p class="mt-4 text-gray-600">Email: <a class="underline" href="mailto:rushiw2@illinois.edu">rushiw2@illinois.edu</a> · <a class="underline" href="mailto:r15990588570@gmail.com">r15990588570@gmail.com</a></p>
+    </div>
+  </section>
+
+  <footer class="py-10 bg-gray-50 border-t">
+    <div class="container-narrow mx-auto px-4 text-sm text-gray-500 flex justify-between">
+      <p>© <span id="year"></span> Rushi Wang. All rights reserved.</p>
+      <p>Built with Tailwind · Deploy on GitHub Pages / Vercel</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function toggleBib(id){
+      const el = document.getElementById(id);
+      if(!el) return; el.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
