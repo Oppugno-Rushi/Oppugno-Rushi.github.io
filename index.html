@@ -28,8 +28,6 @@
       <a href="#home" class="font-extrabold tracking-tight text-lg">Rushi Wang</a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
         <a href="#publications" class="hover:opacity-70">Publications</a>
-        <a href="#projects" class="hover:opacity-70">Projects</a>
-        <a href="#news" class="hover:opacity-70">News</a>
         <a href="#contact" class="hover:opacity-70">Contact</a>
       </nav>
       <a href="#contact" class="md:hidden px-3 py-1.5 rounded-xl bg-gray-900 text-white text-sm">Contact</a>
@@ -80,16 +78,21 @@
         <div class="space-y-6">
           <!-- Publication 1 -->
           <article class="bg-white rounded-2xl border p-6 floaty">
-            <div class="flex gap-4">
-              <!-- Thumbnail placeholder -->
-              <div class="w-24 h-24 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <div class="text-center">
-                  <div class="w-8 h-8 bg-blue-500 rounded mx-auto mb-1"></div>
-                  <div class="text-xs text-gray-600">RW-Steering</div>
+            <div class="flex gap-6">
+              <!-- Image placeholder for RW-Steering diagram -->
+              <div class="w-1/3 flex-shrink-0">
+                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-4 h-full flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-500 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                      <span class="text-white text-xs font-bold">RW</span>
+                    </div>
+                    <div class="text-xs text-gray-600 font-medium">RW-Steering</div>
+                    <div class="text-xs text-gray-500 mt-1">Context Control</div>
+                  </div>
                 </div>
               </div>
               
-              <div class="flex-1">
+              <div class="w-2/3">
                 <div class="flex items-center gap-2 mb-2">
                   <span class="px-2 py-1 bg-green-100 border border-green-500 text-green-700 text-xs font-semibold rounded">EMNLP-2025</span>
                   <span class="px-2 py-1 bg-gray-100 border border-gray-300 text-gray-600 text-xs rounded">AI Safety</span>
@@ -101,7 +104,6 @@
                 
                 <div class="flex flex-wrap gap-2">
                   <a href="https://www.arxiv.org/pdf/2509.04500" class="px-3 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-sm rounded-full hover:bg-blue-100" target="_blank">Paper</a>
-                  <a href="https://github.com/Oppugno-Rushi/rw-steering-page" class="px-3 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-sm rounded-full hover:bg-blue-100" target="_blank">Project Website</a>
                 </div>
               </div>
             </div>
@@ -109,28 +111,32 @@
 
           <!-- Publication 2 -->
           <article class="bg-white rounded-2xl border p-6 floaty">
-            <div class="flex gap-4">
-              <!-- Thumbnail placeholder -->
-              <div class="w-24 h-24 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                <div class="text-center">
-                  <div class="w-8 h-8 bg-green-500 rounded mx-auto mb-1"></div>
-                  <div class="text-xs text-gray-600">AuditBench</div>
+            <div class="flex gap-6">
+              <!-- Image placeholder for AuditBench diagram -->
+              <div class="w-1/3 flex-shrink-0">
+                <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-4 h-full flex items-center justify-center">
+                  <div class="text-center">
+                    <div class="w-16 h-16 bg-green-500 rounded-lg mx-auto mb-2 flex items-center justify-center">
+                      <span class="text-white text-xs font-bold">AB</span>
+                    </div>
+                    <div class="text-xs text-gray-600 font-medium">AuditBench</div>
+                    <div class="text-xs text-gray-500 mt-1">Financial AI</div>
+                  </div>
                 </div>
               </div>
               
-              <div class="flex-1">
+              <div class="w-2/3">
                 <div class="flex items-center gap-2 mb-2">
                   <span class="px-2 py-1 bg-green-100 border border-green-500 text-green-700 text-xs font-semibold rounded">AAAI-2024</span>
                   <span class="px-2 py-1 bg-gray-100 border border-gray-300 text-gray-600 text-xs rounded">AI for Finance</span>
                 </div>
                 
                 <h3 class="text-lg font-bold leading-tight mb-2">AuditBench: A Benchmark for Large Language Models in Financial Statement Auditing</h3>
-                <p class="text-sm text-gray-600 mb-2"><strong>Rushi Wang</strong>, Jiateng Liu, Cheng Qian, Yifan Shen, Yanzhou Pan, Zhaozhuo Xu, Ahmed Abbasi, Heng Ji, Denghui Zhang</p>
+                <p class="text-sm text-gray-600 mb-2"><strong>Rushi Wang</strong>, Jiateng Liu, Weijie Zhao, Shenglan Li, and Denghui Zhang</p>
                 <p class="text-sm text-gray-500 mb-4">Proceedings of the AAAI-2024 Workshop on AI for Financial Services.</p>
                 
                 <div class="flex flex-wrap gap-2">
                   <a href="https://openreview.net/pdf?id=4MaWVsVb2g" class="px-3 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-sm rounded-full hover:bg-blue-100" target="_blank">Paper</a>
-                  <a href="#" class="px-3 py-1 bg-blue-50 border border-blue-200 text-blue-700 text-sm rounded-full hover:bg-blue-100" target="_blank">Project Website</a>
                 </div>
               </div>
             </div>
@@ -140,38 +146,6 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-14 sm:py-20">
-    <div class="container-narrow mx-auto px-4">
-      <h2 class="text-2xl sm:text-3xl font-extrabold">Projects</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <a class="p-5 bg-white rounded-2xl border floaty" href="#" target="_blank">
-          <h3 class="font-semibold">RW‑Steering</h3>
-          <p class="mt-2 text-sm text-gray-600">Rescorla–Wagner‑guided context control for robust LLMs.</p>
-        </a>
-        <a class="p-5 bg-white rounded-2xl border floaty" href="#" target="_blank">
-          <h3 class="font-semibold">AuditBench</h3>
-          <p class="mt-2 text-sm text-gray-600">Auditing‑focused evaluation suite for LLM agents.</p>
-        </a>
-        <a class="p-5 bg-white rounded-2xl border floaty" href="#" target="_blank">
-          <h3 class="font-semibold">Policy‑Aware Agents</h3>
-          <p class="mt-2 text-sm text-gray-600">Policy internalization & complex workflow reasoning.</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- News -->
-  <section id="news" class="py-14 sm:py-20 bg-gray-50">
-    <div class="container-narrow mx-auto px-4">
-      <h2 class="text-2xl sm:text-3xl font-extrabold">News</h2>
-      <ul class="mt-6 space-y-3 text-sm">
-        <li class="p-4 bg-white rounded-xl border floaty"><span class="text-gray-500">2025‑09‑15</span> — EMNLP 2025 camera‑ready prepared.</li>
-        <li class="p-4 bg-white rounded-xl border floaty"><span class="text-gray-500">2025‑08‑30</span> — Released early materials for policy‑aware agent evaluation.</li>
-        <li class="p-4 bg-white rounded-xl border floaty"><span class="text-gray-500">2025‑07‑10</span> — Invited talk on Context Engineering.</li>
-      </ul>
-    </div>
-  </section>
 
   <!-- Contact -->
   <section id="contact" class="py-14 sm:py-20 border-t">
