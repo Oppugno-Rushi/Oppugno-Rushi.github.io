@@ -79,17 +79,11 @@
           <!-- Publication 1 -->
           <article class="bg-white rounded-2xl border p-6 floaty">
             <div class="flex gap-6">
-              <!-- Image placeholder for RW-Steering diagram -->
+              <!-- Image for RW-Steering diagram -->
               <div class="w-1/3 flex-shrink-0">
-                <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-4 h-full flex items-center justify-center">
-                  <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-500 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                      <span class="text-white text-xs font-bold">RW</span>
-                    </div>
-                    <div class="text-xs text-gray-600 font-medium">RW-Steering</div>
-                    <div class="text-xs text-gray-500 mt-1">Context Control</div>
-                  </div>
-                </div>
+                <img src="1.png" alt="RW-Steering Context Control Diagram" 
+                     class="w-full h-auto rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                     onclick="openImageModal('1.png', 'RW-Steering Context Control Diagram')">
               </div>
               
               <div class="w-2/3">
@@ -112,17 +106,11 @@
           <!-- Publication 2 -->
           <article class="bg-white rounded-2xl border p-6 floaty">
             <div class="flex gap-6">
-              <!-- Image placeholder for AuditBench diagram -->
+              <!-- Image for AuditBench diagram -->
               <div class="w-1/3 flex-shrink-0">
-                <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-4 h-full flex items-center justify-center">
-                  <div class="text-center">
-                    <div class="w-16 h-16 bg-green-500 rounded-lg mx-auto mb-2 flex items-center justify-center">
-                      <span class="text-white text-xs font-bold">AB</span>
-                    </div>
-                    <div class="text-xs text-gray-600 font-medium">AuditBench</div>
-                    <div class="text-xs text-gray-500 mt-1">Financial AI</div>
-                  </div>
-                </div>
+                <img src="2.png" alt="AuditBench Financial Statement Analysis Diagram" 
+                     class="w-full h-auto rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                     onclick="openImageModal('2.png', 'AuditBench Financial Statement Analysis Diagram')">
               </div>
               
               <div class="w-2/3">
@@ -162,12 +150,54 @@
     </div>
   </footer>
 
+  <!-- Image Modal -->
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden flex items-center justify-center p-4">
+    <div class="relative max-w-4xl max-h-full">
+      <button onclick="closeImageModal()" class="absolute top-4 right-4 text-white text-2xl font-bold hover:text-gray-300 z-10">
+        ×
+      </button>
+      <img id="modalImage" src="" alt="" class="max-w-full max-h-full rounded-lg">
+      <div id="modalCaption" class="text-white text-center mt-4 text-lg"></div>
+    </div>
+  </div>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     function toggleBib(id){
       const el = document.getElementById(id);
       if(!el) return; el.classList.toggle('hidden');
     }
+    
+    function openImageModal(imageSrc, caption) {
+      const modal = document.getElementById('imageModal');
+      const modalImage = document.getElementById('modalImage');
+      const modalCaption = document.getElementById('modalCaption');
+      
+      modalImage.src = imageSrc;
+      modalCaption.textContent = caption;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+    
+    function closeImageModal() {
+      const modal = document.getElementById('imageModal');
+      modal.classList.add('hidden');
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+    
+    // Close modal when clicking outside the image
+    document.getElementById('imageModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeImageModal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeImageModal();
+      }
+    });
   </script>
 </body>
 </html>
