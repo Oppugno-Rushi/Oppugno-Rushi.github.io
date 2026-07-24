@@ -48,6 +48,25 @@
       pointer-events: none;
       z-index: 9999;
     }
+
+    .portrait-crown {
+      position: absolute;
+      top: -2.75rem;
+      left: 50%;
+      z-index: 2;
+      font-size: 4rem;
+      line-height: 1;
+      filter: drop-shadow(0 8px 8px rgba(245, 158, 11, .32));
+      transform-origin: center bottom;
+      animation: crown-float 2.4s ease-in-out infinite;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @keyframes crown-float {
+      0%, 100% { transform: translate(-50%, 0) rotate(-6deg); }
+      50% { transform: translate(-50%, -10px) rotate(6deg); }
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -80,7 +99,10 @@
           </div>
         </div>
         <div class="flex lg:justify-end">
-          <img src="headshot_1.jpg" alt="profile photo" class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover ring-1 ring-gray-200 floaty" />
+          <div class="relative inline-block">
+            <span class="portrait-crown" aria-hidden="true">👑</span>
+            <img src="headshot_1.jpg" alt="profile photo" class="w-40 h-40 sm:w-48 sm:h-48 rounded-2xl object-cover ring-1 ring-gray-200 floaty" />
+          </div>
         </div>
       </div>
     </div>
