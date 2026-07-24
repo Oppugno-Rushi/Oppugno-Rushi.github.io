@@ -39,9 +39,19 @@
         transform: translateY(-10px);
       }
     }
+
+    #fireworks-canvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 9999;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-800">
+  <canvas id="fireworks-canvas" aria-hidden="true"></canvas>
   <!-- 顶部导航 -->
   <header class="sticky top-0 z-30 bg-white/80 backdrop-blur border-b">
     <div class="container-narrow mx-auto px-4 h-16 flex items-center justify-between">
@@ -220,6 +230,96 @@
         closeImageModal();
       }
     });
+
+    // Click fireworks
+    (function () {
+      const canvas = document.getElementById('fireworks-canvas');
+      const ctx = canvas.getContext('2d');
+      const particles = [];
+      const colors = ['#ff5252', '#ff9800', '#ffeb3b', '#4caf50', '#2196f3', '#e040fb', '#ff4081', '#00e5ff'];
+      let raf = null;
+
+      function resize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      function spawnFirework(x, y) {
+        const count = 45 + Math.floor(Math.random() * 25);
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        for (let i = 0; i < count; i++) {
+          const angle = (Math.PI * 2 * i) / count + Math.random() * 0.2;
+          const speed = 2 + Math.random() * 5;
+          particles.push({
+            x, y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            life: 1,
+            decay: 0.012 + Math.random() * 0.018,
+            size: 1.5 + Math.random() * 2.5,
+            color,
+            gravity: 0.04 + Math.random() * 0.03
+          });
+        }
+        // secondary burst with mixed colors
+        for (let i = 0; i < 20; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const speed = 1 + Math.random() * 3;
+          particles.push({
+            x, y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            life: 1,
+            decay: 0.02 + Math.random() * 0.02,
+            size: 1 + Math.random() * 2,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            gravity: 0.05
+          });
+        }
+        if (!raf) raf = requestAnimationFrame(tick);
+      }
+
+      function tick() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += p.gravity;
+          p.vx *= 0.985;
+          p.life -= p.decay;
+          if (p.life <= 0) {
+            particles.splice(i, 1);
+            continue;
+          }
+          ctx.globalAlpha = Math.max(p.life, 0);
+          ctx.fillStyle = p.color;
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+          // soft glow
+          ctx.globalAlpha = Math.max(p.life * 0.35, 0);
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size * 2.2, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1;
+        if (particles.length) {
+          raf = requestAnimationFrame(tick);
+        } else {
+          raf = null;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+      }
+
+      document.addEventListener('click', function (e) {
+        // don't fire when closing/opening modal buttons only — still OK on page clicks
+        if (e.target.closest('a, button, input, textarea, select')) return;
+        spawnFirework(e.clientX, e.clientY);
+      });
+    })();
   </script>
 </body>
 </html>
