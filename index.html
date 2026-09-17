@@ -93,21 +93,22 @@
 
     .portrait-crown {
       position: absolute;
-      top: -2.75rem;
-      left: 50%;
+      top: -1.25rem;
+      left: 44%;
       z-index: 2;
       font-size: 4rem;
       line-height: 1;
       filter: drop-shadow(0 8px 8px rgba(236, 72, 153, .32));
       transform-origin: center bottom;
+      transform: translate(-50%, 0) rotate(-24deg);
       animation: crown-float 2.4s ease-in-out infinite;
       pointer-events: none;
       user-select: none;
     }
 
     @keyframes crown-float {
-      0%, 100% { transform: translate(-50%, 0) rotate(-6deg); }
-      50% { transform: translate(-50%, -10px) rotate(6deg); }
+      0%, 100% { transform: translate(-50%, 0) rotate(-26deg); }
+      50% { transform: translate(-50%, -10px) rotate(-16deg); }
     }
   </style>
 </head>
@@ -145,7 +146,7 @@
         <div class="flex lg:justify-end">
           <div class="relative inline-block">
             <span class="portrait-crown" aria-hidden="true">👑</span>
-            <img src="headshot_2.png" alt="profile photo" class="w-48 h-48 sm:w-64 sm:h-64 rounded-full object-cover ring-4 ring-pink-200 floaty" />
+            <img src="headshot_2.png" alt="profile photo" class="w-44 h-64 sm:w-56 sm:h-80 rounded-full object-cover ring-4 ring-pink-200 floaty" />
           </div>
         </div>
       </div>
